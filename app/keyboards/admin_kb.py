@@ -1,4 +1,4 @@
-from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
+﻿from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 from app.services.reviews_service import ReviewItem
@@ -48,7 +48,6 @@ def get_template_settings_keyboard() -> InlineKeyboardBuilder:
     builder.button(text='Приветствие', callback_data=f'{ADMIN_TEMPLATE_PREFIX}welcome_text')
     builder.button(text='Портфолио', callback_data=f'{ADMIN_TEMPLATE_PREFIX}portfolio_text')
     builder.button(text='Адрес', callback_data=f'{ADMIN_TEMPLATE_PREFIX}address_text')
-    builder.button(text='FAQ', callback_data=f'{ADMIN_TEMPLATE_PREFIX}faq_text')
     builder.button(text='Контакты', callback_data=f'{ADMIN_TEMPLATE_PREFIX}contacts_text')
     builder.adjust(1)
     return builder

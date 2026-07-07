@@ -315,7 +315,6 @@ async def show_template_settings(message: Message, settings: Settings) -> None:
         f'Приветствие: {current["welcome_text"][:40]}...',
         f'Портфолио: {current["portfolio_text"][:40]}...',
         f'Адрес: {current["address_text"][:40]}...',
-        f'FAQ: {current["faq_text"][:40]}...',
         f'Контакты: {current["contacts_text"][:40]}...',
     ]
     await message.answer('\n'.join(preview), reply_markup=get_template_settings_keyboard().as_markup())
@@ -331,7 +330,6 @@ async def choose_template_setting(callback: CallbackQuery, settings: Settings, s
         'welcome_text': 'приветствие',
         'portfolio_text': 'портфолио',
         'address_text': 'адрес',
-        'faq_text': 'FAQ',
         'contacts_text': 'контакты',
     }
     await state.update_data(setting_key=setting_key)

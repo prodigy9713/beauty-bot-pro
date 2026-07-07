@@ -1,4 +1,4 @@
-from aiogram import F, Router
+﻿from aiogram import F, Router
 from aiogram.filters import CommandStart
 from aiogram.fsm.context import FSMContext
 from aiogram.types import CallbackQuery, Message
@@ -103,11 +103,6 @@ async def show_portfolio(message: Message, settings: Settings) -> None:
 @client_router.message(F.text == '📍 Адрес')
 async def show_address(message: Message, settings: Settings) -> None:
     await message.answer(get_setting(settings.database_path, 'address_text'))
-
-
-@client_router.message(F.text == '❓ FAQ')
-async def show_faq(message: Message, settings: Settings) -> None:
-    await message.answer(get_setting(settings.database_path, 'faq_text'))
 
 
 @client_router.message(F.text == '📞 Связаться')

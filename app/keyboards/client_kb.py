@@ -1,4 +1,4 @@
-from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
+﻿from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 from app.services.booking_service import TimeSlotItem, format_date_display
@@ -20,7 +20,7 @@ def get_client_menu_keyboard() -> ReplyKeyboardMarkup:
             [KeyboardButton(text='💅 Услуги'), KeyboardButton(text='💰 Прайс')],
             [KeyboardButton(text='📅 Записаться'), KeyboardButton(text='⭐ Отзывы')],
             [KeyboardButton(text='📸 Портфолио'), KeyboardButton(text='📍 Адрес')],
-            [KeyboardButton(text='❓ FAQ'), KeyboardButton(text='📞 Связаться')],
+            [KeyboardButton(text='📞 Связаться')],
         ],
         resize_keyboard=True,
         input_field_placeholder='Выберите раздел',

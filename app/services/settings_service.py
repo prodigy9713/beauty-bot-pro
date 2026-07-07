@@ -1,4 +1,4 @@
-import sqlite3
+﻿import sqlite3
 
 
 def get_setting(database_path: str, key: str, default: str = "") -> str:
@@ -32,7 +32,6 @@ def get_all_template_settings(database_path: str) -> dict[str, str]:
         'welcome_text',
         'portfolio_text',
         'address_text',
-        'faq_text',
         'contacts_text',
     ]
     return {key: get_setting(database_path, key) for key in keys}
